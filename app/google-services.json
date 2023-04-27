@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "350207343596",
+    "project_id": "chat-app-42843",
+    "storage_bucket": "chat-app-42843.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350207343596:android:c578cf60376922d6dddec9",
+        "android_client_info": {
+          "package_name": "com.vkohler.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350207343596-35cub1hsgq3j2ocn3971n4hbcf36s955.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3t_UqRs9SXNi7Aku08s4sXxsqOhWom5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350207343596-35cub1hsgq3j2ocn3971n4hbcf36s955.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
