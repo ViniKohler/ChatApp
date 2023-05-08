@@ -71,7 +71,7 @@ public class ChatActivity extends AppCompatActivity {
         message.put(Constants.KEY_TIMESTAMP, new Date());
         database.collection(Constants.KEY_COLLECTION_CHAT).add(message);
         if(conversationId != null) {
-            updateConversations(binding.inputMessage.getText().toString());
+            updateConversation(binding.inputMessage.getText().toString());
         } else {
             HashMap<String, Object> conversation = new HashMap<>();
             conversation.put(Constants.KEY_USER_ID, preferenceManager.getString(Constants.KEY_USER_ID));
@@ -150,12 +150,12 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     private void addConversation(HashMap<String, Object> conversation) {
-        database.collection(Constants.KEY_COLLECTION_USERS)
+        database.collection(Constants.KEY_COLLECTION_CONVERSATIONS)
                 .add(conversation)
                 .addOnSuccessListener(documentReference -> conversationId = documentReference.getId());
     }
 
-    private void updateConversations(String message) {
+    private void updateConversation(String message) {
         DocumentReference documentReference =
                 database.collection(Constants.KEY_COLLECTION_CONVERSATIONS).document(conversationId);
         documentReference.update(
