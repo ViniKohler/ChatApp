@@ -2,10 +2,10 @@ package com.vkohler.chatapp.adapters;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import java.util.Base64;
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -64,7 +64,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHold
     }
 
     private Bitmap getUserImage(String encodedImage) {
-        byte[] bytes = Base64.getDecoder().decode(encodedImage);
+        byte[] bytes = Base64.decode(encodedImage, Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
     }
 
